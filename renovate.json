@@ -1,5 +1,6 @@
 {
   "extends": [
     "config:base"
-  ]
+  ],
+  "baseBranches": ["main", "node10.22.1-alpine3.11"]
 }
