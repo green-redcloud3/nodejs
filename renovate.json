@@ -3,5 +3,19 @@
     "config:base"
   ],
   "baseBranches": ["main", "node10.22.1-alpine3.11","node14.8-alpine","node15.2-stretch-slim","node-release","node-release-multiple"],
-  "bumpVersion": ["patch"]
+  "bumpVersion": ["patch"],
+  "regexManagers": [
+    {
+      "fileMatch": ["^Dockerfile$"],
+      "matchStrings": ["FROM '(?<currentValue>.*?)'\n"],
+      "depNameTemplate": "renovate/renovate",
+      "datasourceTemplate": "docker"
+    },
+    {
+      "fileMatch": ["^Dockerfile$"],
+      "matchStrings": ["ENV NODE_VERSION='(?<currentValue>.*?)'\n"],
+      "depNameTemplate": "renovate/renovate",
+      "datasourceTemplate": "npm"
+    }
+  ]
 }
