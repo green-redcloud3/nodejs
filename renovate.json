@@ -14,7 +14,7 @@
     {
       "fileMatch": ["^Dockerfile$"],
       "matchStrings": ["ENV NODE_VERSION='(?<currentValue>.*?)'\n"],
-      "depNameTemplate": "renovate/renovate",
+      "depNameTemplate": "yarn",
       "datasourceTemplate": "npm"
     }
   ]
