@@ -1,1 +1,1 @@
-FROM node:12.20.0-alpine3.10
+FROM node:14.17.0-alpine3.10
